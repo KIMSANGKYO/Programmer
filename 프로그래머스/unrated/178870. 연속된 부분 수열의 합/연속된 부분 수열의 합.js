@@ -10,7 +10,7 @@ function solution(sequence, k) {
             sum += sequence[++b]
         }else if(sum>k){
          sum -=sequence[a++]   
-        }else{
+        }else if(sum=k){
             result.push([a,b])
             sum += sequence[++b]
             sum -= sequence[a++]
