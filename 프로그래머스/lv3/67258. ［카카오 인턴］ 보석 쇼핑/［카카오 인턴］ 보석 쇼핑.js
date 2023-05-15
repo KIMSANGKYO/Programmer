@@ -29,16 +29,20 @@ function solution(gems) {
     let right = 0;
     
     while(right<gems.length){
+        //해당 보석이 있다면 기존 값 +1
         if(gemMap.has(gems[right])){
             gemMap.set(gems[right],gemMap.get(gems[right])+1);
+            //없다면 생성
         }else{
             gemMap.set(gems[right],1);
         }
+        // 키의 개수가 보석종류의 개수와 같아질때까지
         while(gemMap.size === gemCount){
             if(right - left < result[1]-result[0]){
                 result = [left,right];
             }
             gemMap.set(gems[left],gemMap.get(gems[left])-1);
+            // 키값이 0 인부분은 제거해버리기
             if(gemMap.get(gems[left])===0){
                 gemMap.delete(gems[left]);
             }
@@ -46,6 +50,6 @@ function solution(gems) {
         }
         right++;
     }
-    console.log(gemMap)
+    console.log(result)
     return [result[0]+1,result[1]+1];
 }
