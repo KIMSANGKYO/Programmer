@@ -17,8 +17,7 @@ function solution(k, tangerine) {
     // 개수가 큰 값으로 정렬 
     // 키값만 뽑아야함
     const sorted = Object.values(tanObj).sort((a,b)=>b-a);
-    
-    
+    console.log(sorted)
     let result = 0; 
     // 개수가 담긴 배열 선회해서 k 와 비교할 개수 맞추기
     for(let i=0; i<sorted.length; i++){
