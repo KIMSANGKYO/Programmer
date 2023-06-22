@@ -11,6 +11,7 @@ function solution(s) {
         // 이 두 개 배열은 arr 에서 파생 
         const equal = arr.filter((e)=>e===arr[0]);
         const unequal = arr.filter((e)=>e!==arr[0]);
+        // s[i] ===arr[0] 
         // 둘의 길이가 같은 경우 count 증가 
         // 기존 arr 에 생성한 값은 이 조건에서 실행 후 지워준다.
         if(equal.length === unequal.length){
@@ -22,7 +23,7 @@ function solution(s) {
     if(arr.length!==0){
         count++
     }
-    return count;
-    
-    
+    return count;    
 }
+
+// FIXME: 실행시간 너무 오래걸림 ( 반복문 로직에서 둘을 나눠준것으로 이분이 안되나..)
