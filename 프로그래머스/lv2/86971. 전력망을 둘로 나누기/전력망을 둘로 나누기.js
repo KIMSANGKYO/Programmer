@@ -37,7 +37,7 @@ function countNodes(graph, start, ban) {
         const node = stack.pop();
 
         for (let i = 0; i < graph[node].length; i++) {
-            const next = graph[node][i];
+             const next = graph[node][i];
 
             if (next === ban || visited.has(next)) {
                 continue;
